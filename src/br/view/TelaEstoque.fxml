@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.controllers.TelaEstoqueController">
+   <center>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+            <TitledPane fx:id="paneVenda" animated="false" text="Venda">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <panes>
+                              <TitledPane fx:id="paneVendaJogos" animated="false" text="Jogos">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="venda_tvJogos" layoutX="144.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="venda_tvJogos_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="venda_tvJogos_tcCompatibilidade" editable="false" prefWidth="75.0" text="Compatibilidade" />
+                                                <TableColumn fx:id="venda_tvJogos_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qntd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane fx:id="paneVendaAcessorios" animated="false" text="Acessórios">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="venda_tvAcessorios" layoutX="151.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="venda_tvAcessorios_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="venda_tvAcessorios_tcCompatibilidade" editable="false" prefWidth="124.99996185302734" text="Compatibilidade" />
+                                                <TableColumn fx:id="venda_tvAcessorios_fabricante" prefWidth="105.0" text="Fabricante" />
+                                                <TableColumn fx:id="venda_tvAcessorios_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qntd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane fx:id="paneVendaConsoles" animated="false" text="Consoles">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="venda_tvConsoles" layoutX="82.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="venda_tvConsoles_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="venda_tvConsoles_fabricante" editable="false" prefWidth="105.0" text="Fabricante" />
+                                                <TableColumn fx:id="venda_tvConsoles_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qtnd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="paneLoc" animated="false" text="Locação">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <panes>
+                              <TitledPane fx:id="paneLocJogos" animated="false" text="Jogos">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="loc_tvJogos" layoutX="144.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="loc_tvJogos_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="loc_tvJogos_tcCompatibilidade" editable="false" prefWidth="75.0" text="Compatibilidade" />
+                                                <TableColumn fx:id="loc_tvJogos_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qntd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane fx:id="paneLocAcessorios" animated="false" text="Acessórios">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="loc_tvAcessorios" layoutX="151.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="loc_tvAcessorios_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="loc_tvAcessorios_tcCompatibilidade" editable="false" prefWidth="124.99996185302734" text="Compatibilidade" />
+                                                <TableColumn fx:id="loc_tvAcessorios_fabricante" prefWidth="105.0" text="Fabricante" />
+                                                <TableColumn fx:id="loc_tvAcessorios_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qntd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane fx:id="paneLocConsoles" animated="false" text="Consoles">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="loc_tvConsoles" layoutX="82.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="loc_tvConsoles_tcNome" editable="false" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="loc_tvConsoles_fabricante" editable="false" prefWidth="105.0" text="Fabricante" />
+                                                <TableColumn fx:id="loc_tvConsoles_quantidade" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Qtnd." />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+   <bottom>
+      <ButtonBar buttonMinWidth="100.0" buttonOrder="button" prefHeight="40.0" prefWidth="200.0">
+         <buttons>
+            <Button fx:id="btn_ok" alignment="CENTER" mnemonicParsing="false" onAction="#OnClick_btn_ok" text="OK" />
+         </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
