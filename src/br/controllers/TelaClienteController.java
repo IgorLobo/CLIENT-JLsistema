@@ -24,7 +24,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class TelaClienteController implements Initializable {
 //************************ ATRIBUTOS ********************************
 	private Janela utilJanela = new Janela();
-	String nomeArquivo = TelaPrincipalController.caminhoTxtBancoDados + "Clientes.csv";
+	String nomeArquivo = TelaPrincipalController.nomeArquivoCliente;
 	private ClienteDAO persistencia = new ClienteDAO(nomeArquivo);
 	static String operacao;
 	static Cliente clienteSelecionado;

@@ -23,7 +23,7 @@ import javafx.scene.control.Alert.AlertType;
 public class TelaClienteIncluirController implements Initializable {
 
 //************************ ATRIBUTOS ********************************
-	String nomeArquivo = TelaPrincipalController.caminhoTxtBancoDados + "Clientes.csv";
+	String nomeArquivo = TelaPrincipalController.nomeArquivoCliente;
 
 //*********************** COMPONENTES *******************************	
 	@FXML
