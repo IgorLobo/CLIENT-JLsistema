@@ -106,6 +106,7 @@ public class TelaPedidoInfraController implements Initializable {
 
 	@FXML
 	void OnClick_btn_cancelar(ActionEvent event) {
+		obsSalas.clear();
 		br.util.Janela.fecharJanela(btn_cancelar);
 	}
 

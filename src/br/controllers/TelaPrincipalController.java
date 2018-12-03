@@ -46,13 +46,7 @@ public class TelaPrincipalController implements Initializable {
 	private Button tbBtn_clientes;
 
 	@FXML
-	private Button tbBtn_produtos;
-
-	@FXML
 	private Button tbBtn_pedidos;
-
-	@FXML
-	private Button tbBtn_infra;
 
 	@FXML
 	private Button btn_estoque;
@@ -64,6 +58,9 @@ public class TelaPrincipalController implements Initializable {
 //*********************** ON-ACTION *********************************
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		btn_estoque.setDisable(true);
+		tbBtn_clientes.setDisable(true);
+		tbBtn_pedidos.setDisable(true);
 	}
 
 	@FXML
@@ -78,6 +75,9 @@ public class TelaPrincipalController implements Initializable {
 			utilJanela.novaJanelaComOwnerWait("/br/view/TelaConfiguracao.fxml", false, "Configurações");
 			if (servidorON) {
 				iniciarServidor();
+				btn_estoque.setDisable(false);
+				tbBtn_clientes.setDisable(false);
+				tbBtn_pedidos.setDisable(false);
 			}
 		}
 	}

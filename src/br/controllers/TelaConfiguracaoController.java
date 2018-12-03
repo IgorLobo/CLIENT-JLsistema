@@ -51,6 +51,7 @@ public class TelaConfiguracaoController implements Initializable {
 	@FXML
 	void OnClick_btn_aplicar(ActionEvent event) {
 		porta = Integer.parseInt(txf_porta.getText());
+		ipServer = txf_IP.getText();
 		TelaPrincipalController.servidorON = true;
 		br.util.Janela.fecharJanela(btn_aplicar);
 	}

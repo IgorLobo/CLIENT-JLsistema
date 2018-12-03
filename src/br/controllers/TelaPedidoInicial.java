@@ -224,11 +224,15 @@ public class TelaPedidoInicial implements Initializable {
 			tvLoc.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
 				if (newSelection != null) {
 					pedidoSelecionado = newSelection;
+					btn_alterar.setDisable(false);
+					btn_datalhe.setDisable(false);
 				}
 			});
 
 			tvVenda.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
 				if (newSelection != null) {
+					btn_alterar.setDisable(true);
+					btn_datalhe.setDisable(true);
 					pedidoSelecionado = newSelection;
 				}
 			});
@@ -236,6 +240,8 @@ public class TelaPedidoInicial implements Initializable {
 			tvInfra.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
 				if (newSelection != null) {
 					pedidoSelecionado = newSelection;
+					btn_alterar.setDisable(true);
+					btn_datalhe.setDisable(true);
 				}
 			});
 		} catch (Exception e) {

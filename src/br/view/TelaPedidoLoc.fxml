@@ -58,13 +58,13 @@
                   <VBox>
                      <children>
                         <Label text="Data inicio:" />
-                        <DatePicker fx:id="date_inicio" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" promptText="Data inicio" />
+                        <DatePicker fx:id="date_inicio" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" promptText="Data inicio" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Data final:" />
-                        <DatePicker fx:id="date_fim" maxWidth="120.0" minWidth="120.0" onAction="#OnClick_Date" prefWidth="120.0" promptText="Data fim" />
+                        <DatePicker fx:id="date_fim" editable="false" maxWidth="120.0" minWidth="120.0" onAction="#OnClick_Date" prefWidth="120.0" promptText="Data fim" />
                      </children>
                   </VBox>
                </children>

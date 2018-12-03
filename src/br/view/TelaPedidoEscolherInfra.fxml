@@ -12,7 +12,7 @@
       <ButtonBar buttonMinWidth="90.0" prefHeight="40.0" prefWidth="200.0">
          <buttons>
             <Button fx:id="btn_cancelar" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#OnClick_btn_cancelar" prefWidth="80.0" text="Cancelar" translateX="10.0" ButtonBar.buttonData="LEFT" />
-            <DatePicker fx:id="date_inicio" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" promptText="Data inicio" translateX="-10.0" ButtonBar.buttonData="RIGHT" />
+            <DatePicker fx:id="date_inicio" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" promptText="Data inicio" translateX="-10.0" ButtonBar.buttonData="RIGHT" />
             <Button fx:id="btn_adicionar" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#OnClick_btn_adicionar" prefWidth="80.0" text="Adicionar" translateX="-10.0" ButtonBar.buttonData="RIGHT" />
             <Button fx:id="btn_detalhes" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#OnClick_btn_detalhes" prefWidth="80.0" text="Detalhes" translateX="10.0" ButtonBar.buttonData="LEFT" />
          </buttons>

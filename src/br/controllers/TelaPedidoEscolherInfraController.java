@@ -77,10 +77,21 @@ public class TelaPedidoEscolherInfraController implements Initializable {
 	void OnClick_btn_adicionar(ActionEvent event) {
 		try {
 			if (!tableView_infra.getSelectionModel().isEmpty() && validaCamposObrigatorios()) {
-				TelaPedidoInfraController.obsSalas.add(new InfraestruturaDAO(TelaPrincipalController.nomeArquivoInfra)
+				Infraestrutura infra = new InfraestruturaDAO(TelaPrincipalController.nomeArquivoInfra)
 						.getInfraLoc(tableView_infra.getSelectionModel().getSelectedItem().getCodInfraestrutura(),
-								pegarData(date_inicio)));
+								pegarData(date_inicio));
+				if(validaData(infra)) {
+				TelaPedidoInfraController.obsSalas.add(infra);
 				br.util.Janela.fecharJanela(btn_adicionar);
+				}else {
+					Alert alert = new Alert(AlertType.INFORMATION);
+					alert.setTitle("Atenção");
+					alert.setHeaderText(null);
+					alert.setContentText("Escolha uma infraestrutura!");
+					alert.setContentText("Data já adicionada");
+					alert.show();
+				};
+
 			} else {
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Atenção");
@@ -229,14 +240,13 @@ public class TelaPedidoEscolherInfraController implements Initializable {
 	private String pegarData(DatePicker date) {
 		return date.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 	}
-	/*
-	 * private boolean validaProduto(Produto p) { for (Infraestrutura infra :
-	 * TelaPedidoInfraController.obsSalas) {
-	 * if(infra.getNomeProduto().equals(p.getNomeProduto())) { Alert alert = new
-	 * Alert(AlertType.INFORMATION); alert.setTitle("Atenção");
-	 * alert.setHeaderText(null);
-	 * alert.setContentText("O produto já está na lista de pedidos!"); alert.show();
-	 * return false; } } return true; }
-	 */
+
+	private boolean validaData(Infraestrutura infra) {
+		for (Infraestrutura i : TelaPedidoInfraController.obsSalas) {
+			if (i.getCodInfraestrutura() == infra.getCodInfraestrutura()&& i.getDataLocacao().equals(infra.getDataLocacao()))
+				return false;
+		}
+		return true;
+	}
 
 }
