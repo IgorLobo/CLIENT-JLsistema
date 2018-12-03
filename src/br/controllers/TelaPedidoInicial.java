@@ -226,6 +226,8 @@ public class TelaPedidoInicial implements Initializable {
 					pedidoSelecionado = newSelection;
 					btn_alterar.setDisable(false);
 					btn_datalhe.setDisable(false);
+					tvVenda.getSelectionModel().clearSelection();
+					tvInfra.getSelectionModel().clearSelection();
 				}
 			});
 
@@ -234,6 +236,8 @@ public class TelaPedidoInicial implements Initializable {
 					btn_alterar.setDisable(true);
 					btn_datalhe.setDisable(true);
 					pedidoSelecionado = newSelection;
+					tvInfra.getSelectionModel().clearSelection();
+					tvLoc.getSelectionModel().clearSelection();
 				}
 			});
 
@@ -242,6 +246,8 @@ public class TelaPedidoInicial implements Initializable {
 					pedidoSelecionado = newSelection;
 					btn_alterar.setDisable(true);
 					btn_datalhe.setDisable(true);
+					tvLoc.getSelectionModel().clearSelection();
+					tvVenda.getSelectionModel().clearSelection();
 				}
 			});
 		} catch (Exception e) {
